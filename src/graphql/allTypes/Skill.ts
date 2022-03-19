@@ -9,5 +9,6 @@ export const Skill = objectType({
     t.model.writing();
     t.model.id();
     t.model.userId();
+    t.model.personalities();
   },
 });

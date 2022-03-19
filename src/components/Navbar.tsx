@@ -6,9 +6,13 @@ import EmailIcon from "@mui/icons-material/Email";
 import { useTheme } from "next-themes";
 import Switch from "@mui/material/Switch";
 import LanguageIcon from "@mui/icons-material/Language";
-import { AddressText, SubTitleText } from "src/text";
+import { AddressText, SubTitleText } from "src/utils/text";
 import { UserProps } from "src/context/UserContext";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
+import BoltIcon from "@mui/icons-material/Bolt";
+import CakeIcon from "@mui/icons-material/Cake";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 const NavbarContainer = styled.nav`
   margin-bottom: 20px;
   background-color: var(--bg);
@@ -76,6 +80,21 @@ const Position = styled.h4`
   line-height: 30px;
 `;
 
+const PersonalDetail = styled.div`
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const PersonalDetailItem = styled.div`
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+`;
+
 const AddressContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -138,8 +157,20 @@ const Navbar = ({ user }: UserProps) => {
           <PersonalInfo>
             <Name>{user?.name}</Name>
             <Position> {user?.tagline}</Position>
-            <SubTitleText>strength: {user?.strength}</SubTitleText>
-            <SubTitleText> {user?.born}</SubTitleText>
+            <PersonalDetail>
+              <PersonalDetailItem>
+                <BoltIcon />
+                <SubTitleText>strength: {user?.strength}</SubTitleText>
+              </PersonalDetailItem>
+              <PersonalDetailItem>
+                <CakeIcon />
+                <SubTitleText> {user?.born}</SubTitleText>
+              </PersonalDetailItem>
+              <PersonalDetailItem>
+                <LocationOnIcon />
+                <SubTitleText> {user?.location}</SubTitleText>
+              </PersonalDetailItem>
+            </PersonalDetail>
           </PersonalInfo>
           <AddressContainer>
             <Address>

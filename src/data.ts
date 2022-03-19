@@ -3,14 +3,16 @@ export const data = {
     name: "Noppadon Raksasiripong",
     image:
       "https://firebasestorage.googleapis.com/v0/b/myshop-e-commerce.appspot.com/o/sun_and_moon_icon_177460.png?alt=media&token=63624ddf-e57d-4e6d-944d-718e175f2442",
-    tagline: "Full-Stack Web Developer(Reactjs, Nextjs, Nodejs, Express)",
+    tagline: "Self Full-Stack Web Developer(Reactjs, Nextjs, Nodejs, Express)",
+    location: "Bangkok,Thailand",
     email: "noppadol.raksa@gmail.com",
     github: "github.com/noppadolraksa",
     website: "",
-    strength: "Fast learner",
+    strength: "Fast Learner",
     englishSkill: "Intermediate",
     born: "January 8th 1995",
-    objective: "",
+    objective:
+      "I am a self-taught and enthusiatic worker with the experience of sales executive. ",
     phone: "0875606096",
     frontEndSkills: [
       "Reactjs",
@@ -146,7 +148,7 @@ export const data = {
     {
       title: "E-Commerce",
       description:
-        "MERN Stack E-commerce from scratch for practice that user can add products to cart and buy it then the the bill will show on admin dashboard",
+        "MERN Stack B2C E-commerce from scratch with mobile responsively. these are the online retail stores that either sale products from their own brand or sell a variety of brands. there is admin dashboard for manage their users, products, and order with user's enquiry.",
       technologies: [
         "ReactJS",
         "Redux",
@@ -181,6 +183,7 @@ export const data = {
       link1: "https://my-shop-e-commerce.netlify.app",
       link2: "https://my-shop-admin.netlify.app",
       link3: "https://prezi.com/p/e8h1eijgkuo1/?present=1",
+      finished: true,
     },
     {
       title: "Portfolio",
@@ -204,6 +207,7 @@ export const data = {
         "Nested Comments(tree-like structure)",
       ],
       sourceCode: "https://github.com/noppadolraksa/portfolio",
+      finished: true,
     },
     {
       title: "Serverless chat app ",
@@ -222,6 +226,7 @@ export const data = {
         "Update realtime chatapp,Form handling,",
       ],
       sourceCode: "https://github.com/noppadolraksa/nextchatapp",
+      finished: false,
     },
   ],
   education: [
@@ -245,9 +250,17 @@ export const data = {
     },
   ],
   skill: {
-    reading: 5,
-    writing: 3,
-    speaking: 3,
-    listening: 4,
+    reading: 4,
+    writing: 2,
+    speaking: 2,
+    listening: 3,
+    communicating: 4,
+    personalities: [
+      "Humble",
+      "Emphaty",
+      "Patience",
+      "Positive Attitude",
+      "Resolving Problem",
+    ],
   },
 };

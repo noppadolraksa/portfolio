@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleText } from "src/text";
+import { TitleText } from "src/utils/text";
 import styled from "@emotion/styled";
 
 const TitleContainer = styled.div`

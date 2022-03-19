@@ -1,4 +1,4 @@
-import { data } from "../graphql/data";
+import { data } from "../data";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
@@ -18,6 +18,7 @@ async function main() {
     github,
     backEndSkills,
     born,
+    location,
     englishSkill,
     frontEndSkills,
     infrastructures,
@@ -27,7 +28,7 @@ async function main() {
     website,
   } = data.user;
 
-  const { reading, writing, listening, speaking } = data.skill;
+  const { reading, writing, listening, speaking, personalities } = data.skill;
 
   await prisma.user.create({
     data: {
@@ -40,6 +41,7 @@ async function main() {
       strength: strength,
       born: born,
       objective: objective,
+      location: location,
       englishSkill: englishSkill,
       frontEndSkills: frontEndSkills,
       backEndSkills: backEndSkills,
@@ -52,6 +54,7 @@ async function main() {
           speaking: speaking,
           reading: reading,
           writing: writing,
+          personalities: personalities,
         },
       },
     },

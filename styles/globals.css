@@ -19,7 +19,7 @@ a {
   --secondaryBg: rgb(153, 152, 152);
   --primary: #1e293b;
   --secondary: #94a3b8;
-  --third: #4338ca;
+  --third: #c7d2fe;
   --primaryFont: #0f172a;
   --secondaryFont: rgb(204, 204, 204);
   --invertFont: rgb(206, 206, 206);
@@ -29,6 +29,10 @@ a {
   --lFont: 16px;
   --xlFont: 20px;
   --xxlFont: 24px;
+}
+@media only screen and (max-width: 800 px) {
+  :root {
+  }
 }
 
 [data-theme="dark"] {

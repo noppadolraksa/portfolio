@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { SubTitleText } from "src/text";
+import { SubTitleText } from "src/utils/text";
 import { Project } from "src/context/UserContext";
 
 type ProjectType = {
@@ -15,11 +15,11 @@ const Topic = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
+  width: 20%;
 `;
 
 const Right = styled.div`
-  flex: 4;
+  width: 80%;
   border-left: 3px solid var(--secondaryFont);
   padding-left: 10px;
   position: relative;
@@ -37,7 +37,9 @@ const Right = styled.div`
 
 const List = styled.div``;
 
-const ListItem = styled.div``;
+const ListItem = styled.div`
+  display: inline;
+`;
 
 const ProjectContainer = styled.div`
   width: full;
@@ -52,7 +54,7 @@ const SubSectionProject = ({ project }: ProjectType) => {
             <Topic key={list.id}>
               <Left>
                 {/* <SubTitleText>{list.date}</SubTitleText> */}
-                <SubTitleText>
+                <SubTitleText style={{ fontWeight: 400 }}>
                   {list.index === 1 && "1st project"}
                   {list.index === 2 && "2nd project"}
                   {list.index === 3 && "3rd project"}
@@ -70,13 +72,16 @@ const SubSectionProject = ({ project }: ProjectType) => {
                   </ListItem>
                   <ListItem>
                     <SubTitleText>
+                      <span style={{ fontWeight: "400" }}>library: </span>
+                      {list.technologies.join(", ")}
+                    </SubTitleText>
+                  </ListItem>
+                  <ListItem>
+                    <SubTitleText>
                       <span style={{ fontWeight: "400" }}>github: </span>
                       <a href={list.sourceCode}>{list.sourceCode}</a>
                     </SubTitleText>
                   </ListItem>
-                  {/* <ListItem>
-                    <SubTitleText>{list.technologies}</SubTitleText>
-                  </ListItem> */}
                   {/* <ListItem>
                     <SubTitleText>{list.techniques}</SubTitleText>
                   </ListItem> */}

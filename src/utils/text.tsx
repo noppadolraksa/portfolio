@@ -22,15 +22,21 @@ export const SubTitleText = styled.p`
   font-size: var(--sFont);
   color: var(--primaryFont);
   font-weight: 300;
-  display: flex;
-  align-items: center;
-  margin: auto;
 
-  padding: 0px 4px 4px 0px;
-  line-height: 20px;
-  margin: 0;
-  overflow-wrap: break-word;
+  /* padding: 0px 4px 4px 0px; */
+  line-height: 23px;
+  margin: 0px;
 
   /* color: var(--secondary);
   text-shadow: 0 0 10px var(--third); */
+`;
+
+export const PersonalitiesText = styled.p`
+  font-size: var(--mFont);
+  color: var(--primaryFont);
+  background-color: var(--third);
+
+  padding: 2px;
+  border-radius: 5px;
+  margin: 2px;
 `;

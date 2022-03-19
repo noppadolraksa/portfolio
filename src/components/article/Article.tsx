@@ -7,8 +7,7 @@ import SectionProject from "./articleComponent/SectionProject";
 import { UserProps } from "src/context/UserContext";
 
 const Container = styled.article`
-  flex: 2;
-
+  width: 67%;
   padding-right: 20px;
   padding-left: 11.5px;
 `;

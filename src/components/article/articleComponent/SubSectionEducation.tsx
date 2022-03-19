@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { SubTitleText } from "src/text";
+import { SubTitleText } from "src/utils/text";
 import { Education } from "src/context/UserContext";
 
 type EducationProps = {
@@ -15,11 +15,11 @@ const Topic = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
+  width: 20%;
 `;
 
 const Right = styled.div`
-  flex: 4;
+  width: 80%;
   border-left: 3px solid var(--secondaryFont);
   padding-left: 10px;
   position: relative;
@@ -44,7 +44,6 @@ const EducationContainer = styled.div`
 `;
 
 const SubSectionEducation = ({ education }: EducationProps) => {
-  console.log(education);
   return (
     <div>
       <EducationContainer>
@@ -53,12 +52,14 @@ const SubSectionEducation = ({ education }: EducationProps) => {
             <Topic key={list.id}>
               <Left>
                 {/* <SubTitleText>{list.date}</SubTitleText> */}
-                <SubTitleText>2016-2020</SubTitleText>
+                <SubTitleText style={{ fontWeight: 400 }}>
+                  {list.date}
+                </SubTitleText>
               </Left>
               <Right>
                 <List>
                   <ListItem>
-                    <SubTitleText style={{ fontWeight: "500" }}>
+                    <SubTitleText style={{ fontWeight: 500 }}>
                       {list.degree}
                     </SubTitleText>
                   </ListItem>

@@ -13,9 +13,11 @@ export type Skill = {
   reading: number;
   speaking: number;
   writing: number;
+  personalities: string[];
 };
 
 export type Project = {
+  technologies: string[];
   id: string;
   description: string;
   index: number;
@@ -24,6 +26,7 @@ export type Project = {
   link1?: string;
   link2?: string;
   link3?: string;
+  finished: boolean;
 };
 
 export type Education = {
@@ -42,7 +45,7 @@ export type User = {
   tagline: string;
   email: string;
   github: string;
-
+  location: string;
   strength: string;
   phone: string;
   objective: string;

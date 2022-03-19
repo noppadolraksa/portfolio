@@ -15,5 +15,6 @@ export const Project = objectType({
     t.model.link1();
     t.model.link2();
     t.model.link3();
+    t.model.finished();
   },
 });

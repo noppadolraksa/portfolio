@@ -17,6 +17,7 @@ export const User = objectType({
     t.model.phone();
     t.model.strength();
     t.model.born();
+    t.model.location();
     t.model.objective();
     t.model.englishSkill();
     t.model.backEndSkills();

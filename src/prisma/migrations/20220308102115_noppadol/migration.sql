@@ -3,6 +3,7 @@ CREATE TABLE "User" (
     "id" TEXT NOT NULL,
     "index" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
     "tagline" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "github" TEXT NOT NULL,
@@ -32,6 +33,7 @@ CREATE TABLE "Project" (
     "link1" TEXT,
     "link2" TEXT,
     "link3" TEXT,
+    "finished" BOOLEAN NOT NULL,
 
     CONSTRAINT "Project_pkey" PRIMARY KEY ("id")
 );
@@ -58,6 +60,7 @@ CREATE TABLE "Skill" (
     "writing" INTEGER NOT NULL,
     "speaking" INTEGER NOT NULL,
     "listening" INTEGER NOT NULL,
+    "personalities" TEXT[],
 
     CONSTRAINT "Skill_pkey" PRIMARY KEY ("id")
 );

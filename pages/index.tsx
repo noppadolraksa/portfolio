@@ -28,6 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
           email
           github
           website
+          location
           strength
           phone
           objective
@@ -47,6 +48,7 @@ export const getStaticProps: GetStaticProps = async () => {
             link1
             link2
             link3
+            finished
           }
           education {
             id
@@ -61,6 +63,7 @@ export const getStaticProps: GetStaticProps = async () => {
             reading
             speaking
             writing
+            personalities
           }
         }
       }
