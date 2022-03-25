@@ -22,9 +22,8 @@ export const SubTitleText = styled.p`
   font-size: var(--sFont);
   color: var(--primaryFont);
   font-weight: 300;
-
   /* padding: 0px 4px 4px 0px; */
-  line-height: 23px;
+  line-height: 20px;
   margin: 0px;
 
   /* color: var(--secondary);

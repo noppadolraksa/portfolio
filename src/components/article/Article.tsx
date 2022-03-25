@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Objective from "./articleComponent/Objective";
-
 import SectionEducation from "./articleComponent/SectionEducation";
 import SectionProject from "./articleComponent/SectionProject";
-import { UserProps } from "src/context/UserContext";
+import { UserProps } from "src/types/userTypes";
 
 const Container = styled.article`
   width: 67%;

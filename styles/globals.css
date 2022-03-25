@@ -30,10 +30,6 @@ a {
   --xlFont: 20px;
   --xxlFont: 24px;
 }
-@media only screen and (max-width: 800 px) {
-  :root {
-  }
-}
 
 [data-theme="dark"] {
   --bg: #282b30;

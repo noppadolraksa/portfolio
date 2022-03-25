@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-
 import React from "react";
 import { SubTitleText, TitleText } from "src/utils/text";
 
@@ -8,9 +7,9 @@ const SectionContainer = styled.section`
   justify-content: center;
   margin-bottom: 20px;
 `;
+
 const DescContainer = styled.div`
   width: 80%;
-  width: full;
   padding-left: 10px;
 `;
 

@@ -2,17 +2,17 @@ export const data = {
   user: {
     name: "Noppadon Raksasiripong",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/myshop-e-commerce.appspot.com/o/sun_and_moon_icon_177460.png?alt=media&token=63624ddf-e57d-4e6d-944d-718e175f2442",
-    tagline: "Self Full-Stack Web Developer(Reactjs, Nextjs, Nodejs, Express)",
+      "https://firebasestorage.googleapis.com/v0/b/chata-6a69a.appspot.com/o/portfolio%2FIMG-2938.JPG?alt=media&token=4415aa83-26cc-4095-8062-ca0bf4616252",
+    tagline: "Full-Stack Web Developer(Reactjs, Nextjs, Nodejs)",
     location: "Bangkok,Thailand",
     email: "noppadol.raksa@gmail.com",
     github: "github.com/noppadolraksa",
-    website: "",
+    website: "www.linkedin.com/in/noppadolbright",
     strength: "Fast Learner",
     englishSkill: "Intermediate",
     born: "January 8th 1995",
     objective:
-      "I am a self-taught and enthusiatic worker with the experience of sales executive. ",
+      "A passionate web developer who had experience in sales and marketing with ability to learn and collaborate in rapidly changing environments. Learned through freecodecamp and more for building projects from scratch. I am a fast learner with strong time management and hard worker.",
     phone: "0875606096",
     frontEndSkills: [
       "Reactjs",
@@ -22,7 +22,7 @@ export const data = {
       "Javascript",
       "Typescript",
       "Redux",
-      "Context api",
+      "Context API",
       "Styled-component",
       "Tailwind",
       "Firebase",
@@ -146,7 +146,7 @@ export const data = {
   },
   project: [
     {
-      title: "E-Commerce",
+      title: "E-Commerce(29pages)",
       description:
         "MERN Stack B2C E-commerce from scratch with mobile responsively. these are the online retail stores that either sale products from their own brand or sell a variety of brands. there is admin dashboard for manage their users, products, and order with user's enquiry.",
       technologies: [
@@ -188,16 +188,16 @@ export const data = {
     {
       title: "Portfolio",
       description:
-        "Nextjs with graghQL, Nexus, Apollo,Prisma, postgreSQL and typescript",
+        "Nextjs with GraghQL, Nexus, Apollo,Prisma, PostgreSQL and Typescript",
       technologies: [
         "NextJs",
         "Prisma",
-        " Apollo",
-        " Nexus",
-        " GraphQL",
-        " PostgreSQL",
+        "Apollo",
+        "Nexus",
+        "GraphQL",
+        "PostgreSQL",
         "Typescript",
-        " Styled-component",
+        "Styled-component",
         "Next-themes",
       ],
       techniques: [
@@ -210,7 +210,7 @@ export const data = {
       finished: true,
     },
     {
-      title: "Serverless chat app ",
+      title: "Serverless chat app",
       description: "Serverless Nextjs with firebase, tailwind and typescript",
       technologies: [
         "NextJs",
@@ -224,9 +224,11 @@ export const data = {
         "login-register with firebase authentication",
         "cool UI with antd and tailwind",
         "Update realtime chatapp,Form handling,",
+        "upload image",
       ],
       sourceCode: "https://github.com/noppadolraksa/nextchatapp",
-      finished: false,
+      link1: "https://nextchatapp-noppadolraksa.vercel.app",
+      finished: true,
     },
   ],
   education: [
@@ -246,15 +248,15 @@ export const data = {
       degree: "Codecamp",
       institution: "Freecodecamp",
       date: "present",
-      fieldOfStudy: "html,css,javascript,frontend,backend",
+      fieldOfStudy: "html,css,javascript,data-structure,algorithms",
     },
   ],
   skill: {
-    reading: 4,
-    writing: 2,
-    speaking: 2,
-    listening: 3,
-    communicating: 4,
+    reading: 5,
+    writing: 3,
+    speaking: 3,
+    listening: 4,
+    communicating: 5,
     personalities: [
       "Humble",
       "Emphaty",

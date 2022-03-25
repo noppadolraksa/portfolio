@@ -6,6 +6,7 @@ CREATE TABLE "User" (
     "location" TEXT NOT NULL,
     "tagline" TEXT NOT NULL,
     "email" TEXT NOT NULL,
+    "image" TEXT NOT NULL,
     "github" TEXT NOT NULL,
     "website" TEXT NOT NULL,
     "phone" TEXT NOT NULL,

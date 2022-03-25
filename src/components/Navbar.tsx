@@ -7,11 +7,12 @@ import { useTheme } from "next-themes";
 import Switch from "@mui/material/Switch";
 import LanguageIcon from "@mui/icons-material/Language";
 import { AddressText, SubTitleText } from "src/utils/text";
-import { UserProps } from "src/context/UserContext";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import BoltIcon from "@mui/icons-material/Bolt";
 import CakeIcon from "@mui/icons-material/Cake";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { UserProps } from "src/types/userTypes";
 
 const NavbarContainer = styled.nav`
   margin-bottom: 20px;
@@ -137,7 +138,7 @@ const Navbar = ({ user }: UserProps) => {
     <NavbarContainer>
       <Left>
         <PictureContainer>
-          <ProfileWrapper />
+          <ProfileWrapper src={user.image} />
         </PictureContainer>
       </Left>
       <Right>
@@ -168,7 +169,11 @@ const Navbar = ({ user }: UserProps) => {
               </PersonalDetailItem>
               <PersonalDetailItem>
                 <LocationOnIcon />
-                <SubTitleText> {user?.location}</SubTitleText>
+                <SubTitleText> Bangkae, {user?.location}</SubTitleText>
+              </PersonalDetailItem>
+              <PersonalDetailItem>
+                <LinkedInIcon />
+                <SubTitleText> {user?.website}</SubTitleText>
               </PersonalDetailItem>
             </PersonalDetail>
           </PersonalInfo>

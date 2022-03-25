@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import TitleSection from "./TitleSection";
-
 import SubSectionProject from "./SubSectionProject";
-import { Project } from "src/context/UserContext";
+import { Project } from "src/types/userTypes";
 
 const SectionContainer = styled.div`
   margin-bottom: 20px;

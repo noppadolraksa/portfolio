@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { PersonalitiesText, SubTitleText, TitleText } from "src/utils/text";
-
-import { UserProps, useUser } from "src/context/UserContext";
+import { UserProps } from "src/types/userTypes";
 import RatingStars from "src/utils/RatingStars";
 
 const Container = styled.div`

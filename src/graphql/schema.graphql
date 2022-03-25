@@ -19,6 +19,7 @@ input EducationOrderByRelationAggregateInput {
 
 type Project {
   description: String!
+  finished: Boolean!
   id: String!
   index: Int!
   link1: String
@@ -38,12 +39,29 @@ input ProjectOrderByRelationAggregateInput {
 
 type Query {
   user: [User]!
-  users(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int, orderBy: [QueryUsersOrderByInput!]): [User!]!
+  users(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int, orderBy: [UserOrderByWithRelationInput!]): [User!]!
 }
 
-input QueryUsersOrderByInput {
-  education: EducationOrderByRelationAggregateInput
-  project: ProjectOrderByRelationAggregateInput
+type Skill {
+  id: String!
+  listening: Int!
+  personalities: [String!]!
+  reading: Int!
+  speaking: Int!
+  userId: String!
+  writing: Int!
+}
+
+input SkillOrderByWithRelationInput {
+  id: SortOrder
+  index: SortOrder
+  listening: SortOrder
+  personalities: SortOrder
+  reading: SortOrder
+  speaking: SortOrder
+  user: UserOrderByWithRelationInput
+  userId: SortOrder
+  writing: SortOrder
 }
 
 enum SortOrder {
@@ -60,15 +78,41 @@ type User {
   frontEndSkills: [String!]!
   github: String!
   id: String!
+  image: String!
   index: Int!
   infrastructures: [String!]!
+  location: String!
   name: String!
   objective: String!
   phone: String!
   project: [Project]!
+  skill: Skill
   strength: String!
   tagline: String!
   website: String!
+}
+
+input UserOrderByWithRelationInput {
+  backEndSkills: SortOrder
+  born: SortOrder
+  education: EducationOrderByRelationAggregateInput
+  email: SortOrder
+  englishSkill: SortOrder
+  frontEndSkills: SortOrder
+  github: SortOrder
+  id: SortOrder
+  image: SortOrder
+  index: SortOrder
+  infrastructures: SortOrder
+  location: SortOrder
+  name: SortOrder
+  objective: SortOrder
+  phone: SortOrder
+  project: ProjectOrderByRelationAggregateInput
+  skill: SkillOrderByWithRelationInput
+  strength: SortOrder
+  tagline: SortOrder
+  website: SortOrder
 }
 
 input UserWhereUniqueInput {

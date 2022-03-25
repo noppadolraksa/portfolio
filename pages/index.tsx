@@ -2,17 +2,16 @@ import styled from "@emotion/styled";
 import Navbar from "src/components/Navbar";
 import Sidebar from "src/components/Sidebar";
 import Article from "src/components/article/Article";
-import Footer from "src/components/Footer";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { client } from "src/lib/apollo";
 import { gql } from "@apollo/client";
-import { UserProps } from "src/context/UserContext";
+import { UserProps } from "src/types/userTypes";
 
 const Container = styled.div`
   margin: 0;
   background-color: var(--bg);
-  /* width: 794px; */
+  width: 794px;
   height: 1123px;
 `;
 
@@ -24,6 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
           id
           index
           name
+          image
           tagline
           email
           github
@@ -77,13 +77,14 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const index = ({ user }: UserProps) => {
+const home = ({ user }: UserProps) => {
   return (
     <Container>
       <Head>
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <Navbar user={user} />
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <Sidebar user={user} />
@@ -93,4 +94,4 @@ const index = ({ user }: UserProps) => {
   );
 };
 
-export default index;
+export default home;

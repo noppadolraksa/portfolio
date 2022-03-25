@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { SubTitleText } from "src/utils/text";
-import { Project } from "src/context/UserContext";
+import { Project } from "src/types/userTypes";
+import Link from "next/link";
 
 type ProjectType = {
   project: Project[];
@@ -79,17 +80,15 @@ const SubSectionProject = ({ project }: ProjectType) => {
                   <ListItem>
                     <SubTitleText>
                       <span style={{ fontWeight: "400" }}>github: </span>
-                      <a href={list.sourceCode}>{list.sourceCode}</a>
+                      <Link href={list.sourceCode}>{list.sourceCode}</Link>
                     </SubTitleText>
                   </ListItem>
-                  {/* <ListItem>
-                    <SubTitleText>{list.techniques}</SubTitleText>
-                  </ListItem> */}
+
                   {list.link1 && (
                     <ListItem>
                       <SubTitleText>
                         <span style={{ fontWeight: "400" }}>client: </span>
-                        <a href={list.link1}>{list.link1}</a>
+                        <Link href={list.link1}>{list.link1}</Link>
                       </SubTitleText>
                     </ListItem>
                   )}
@@ -97,7 +96,7 @@ const SubSectionProject = ({ project }: ProjectType) => {
                     <ListItem>
                       <SubTitleText>
                         <span style={{ fontWeight: "400" }}>admin: </span>
-                        <a href={list.link2}>{list.link2}</a>
+                        <Link href={list.link2}>{list.link2}</Link>
                       </SubTitleText>
                     </ListItem>
                   )}
@@ -107,7 +106,17 @@ const SubSectionProject = ({ project }: ProjectType) => {
                         <span style={{ fontWeight: "400" }}>
                           presentation:{" "}
                         </span>
-                        <a href={list.link3}>{list.link3}</a>
+                        <Link href={list.link3}>{list.link3}</Link>
+                      </SubTitleText>
+                    </ListItem>
+                  )}
+                  {list.title === "Serverless chat app" && (
+                    <ListItem>
+                      <SubTitleText>
+                        <span style={{ fontWeight: "400" }}>demo: </span>
+                        <Link href="https://www.youtube.com/watch?v=oWjrAPSVYCY">
+                          https://www.youtube.com/watch?v=oWjrAPSVYCY
+                        </Link>
                       </SubTitleText>
                     </ListItem>
                   )}

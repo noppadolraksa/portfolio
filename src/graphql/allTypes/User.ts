@@ -10,6 +10,7 @@ export const User = objectType({
     t.model.id();
     t.model.index();
     t.model.name();
+    t.model.image();
     t.model.tagline();
     t.model.email();
     t.model.github();

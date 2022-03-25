@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import TitleSection from "./TitleSection";
-import SubSection from "./SubSectionEducation";
-
 import SubSectionEducation from "./SubSectionEducation";
-import { Education, UserProps } from "src/context/UserContext";
+import { Education } from "src/types/userTypes";
 
 const SectionContainer = styled.div`
   margin-bottom: 20px;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { SubTitleText } from "src/utils/text";
-import { Education } from "src/context/UserContext";
+import { Education } from "src/types/userTypes";
 
 type EducationProps = {
   education: Education[];

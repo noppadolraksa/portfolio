@@ -1,12 +1,12 @@
 {
-    "name": "nexttscypress",
+    "name": "nextportfolio",
     "private": true,
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "prismaDev": "dotenv -e .env.local -- npx prisma migrate dev "
+        "prismaDev": "dotenv -e .env.local -- npx prisma migrate dev"
     },
     "prisma": {
         "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} src/prisma/seed.ts",
@@ -14,7 +14,7 @@
     },
     "dependencies": {
         "@apollo/client": "^3.5.10",
-        "@chakra-ui/react": "^1.8.6",
+        "@emotion/babel-plugin": "^11.7.2",
         "@emotion/core": "^11.0.0",
         "@emotion/css": "^11.7.1",
         "@emotion/react": "^11.8.1",
@@ -25,6 +25,7 @@
         "add": "^2.0.6",
         "apollo-server-micro": "^3.6.3",
         "dotenv-cli": "^5.0.0",
+        "emotion": "^11.0.0",
         "framer-motion": "^6.2.8",
         "graphql": "^16.3.0",
         "micro": "^9.3.4",
@@ -36,8 +37,6 @@
         "nexus-plugin-prisma": "^0.35.0",
         "react": "17.0.2",
         "react-dom": "17.0.2",
-        "styled-components": "^5.3.3",
-        "superjson": "^1.8.1",
         "yarn": "^1.22.17"
     },
     "devDependencies": {
@@ -47,7 +46,7 @@
         "@types/styled-components": "^5.1.20",
         "eslint": "8.4.1",
         "eslint-config-next": "12.0.7",
-        "prisma": "^3.10.0",
+        "prisma": "^3.11.1",
         "ts-node": "^10.4.0",
         "typescript": "4.5.4"
     }
