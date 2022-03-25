@@ -6,9 +6,9 @@ import client from "src/lib/apollo";
 import { gql } from "@apollo/client";
 import { UserProps } from "src/types/userTypes";
 import IndexContainer from "src/components/Index";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { data } = await client.query({
     query: gql`
       query Query {
