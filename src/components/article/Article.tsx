@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import Objective from "./articleComponent/Objective";
 import SectionEducation from "./articleComponent/SectionEducation";
 import SectionProject from "./articleComponent/SectionProject";

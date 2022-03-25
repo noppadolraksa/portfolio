@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import Navbar from "src/components/Navbar";
 import Sidebar from "src/components/Sidebar";
 import Article from "src/components/article/Article";

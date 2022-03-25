@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import TitleSection from "./TitleSection";
 import SubSectionEducation from "./SubSectionEducation";
 import { Education } from "src/types/userTypes";

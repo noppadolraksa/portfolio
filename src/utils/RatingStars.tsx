@@ -1,6 +1,6 @@
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 type RatingStarsType = {
   rating: number;
 };

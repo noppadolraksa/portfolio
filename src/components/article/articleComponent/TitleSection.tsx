@@ -1,6 +1,6 @@
 import React from "react";
 import { TitleText } from "src/utils/text";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 const TitleContainer = styled.div`
   flex: 1;

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import { PersonalitiesText, SubTitleText, TitleText } from "src/utils/text";
 import { UserProps } from "src/types/userTypes";
 import RatingStars from "src/utils/RatingStars";

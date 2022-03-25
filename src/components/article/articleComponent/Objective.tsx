@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import React from "react";
 import { SubTitleText, TitleText } from "src/utils/text";
 

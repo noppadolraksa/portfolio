@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import { SubTitleText } from "src/utils/text";
 import { Project } from "src/types/userTypes";
 import Link from "next/link";
