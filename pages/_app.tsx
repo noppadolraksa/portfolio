@@ -5,7 +5,7 @@ import { ApolloProvider } from "@apollo/client";
 
 import React from "react";
 
-import { client } from "src/lib/apollo";
+import client from "src/lib/apollo";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,21 +1,13 @@
-import styled from "styled-components";
 import Navbar from "src/components/Navbar";
 import Sidebar from "src/components/Sidebar";
 import Article from "src/components/article/Article";
 import Head from "next/head";
-import { GetStaticProps } from "next";
-import { client } from "src/lib/apollo";
+import client from "src/lib/apollo";
 import { gql } from "@apollo/client";
 import { UserProps } from "src/types/userTypes";
+import IndexContainer from "src/components/Index";
 
-const Container = styled.div`
-  margin: 0;
-  background-color: var(--bg);
-  width: 794px;
-  height: 1123px;
-`;
-
-export const getStaticProps: GetStaticProps = async () => {
+export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query Query {
@@ -75,11 +67,11 @@ export const getStaticProps: GetStaticProps = async () => {
       user: data.user[0],
     },
   };
-};
+}
 
-const home = ({ user }: UserProps) => {
+const Home = ({ user }: UserProps) => {
   return (
-    <Container>
+    <IndexContainer>
       <Head>
         <title>Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -90,8 +82,8 @@ const home = ({ user }: UserProps) => {
         <Sidebar user={user} />
         <Article user={user} />
       </div>
-    </Container>
+    </IndexContainer>
   );
 };
 
-export default home;
+export default Home;
