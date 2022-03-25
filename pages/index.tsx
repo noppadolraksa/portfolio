@@ -7,6 +7,7 @@ import { gql } from "@apollo/client";
 import { UserProps } from "src/types/userTypes";
 import IndexContainer from "src/components/Index";
 import { GetServerSideProps } from "next";
+import { useEffect, useState } from "react";
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { data } = await client.query({
@@ -71,6 +72,11 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 
 const Home = ({ user }: UserProps) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   return (
     <IndexContainer>
       <Head>
