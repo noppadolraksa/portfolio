@@ -7,7 +7,7 @@ import React from "react";
 
 import client from "src/lib/apollo";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ApolloProvider client={client}>
       <ThemeProvider defaultTheme="system">
