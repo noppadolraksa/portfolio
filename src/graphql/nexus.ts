@@ -7,64 +7,16 @@
 import type { Context } from "./context"
 
 
-declare global {
-  interface NexusGenCustomOutputProperties<TypeName extends string> {
-    crud: NexusPrisma<TypeName, 'crud'>
-    model: NexusPrisma<TypeName, 'model'>
-  }
-}
+
 
 declare global {
   interface NexusGen extends NexusGenTypes {}
 }
 
 export interface NexusGenInputs {
-  EducationOrderByRelationAggregateInput: { // input type
-    _count?: NexusGenEnums['SortOrder'] | null; // SortOrder
-  }
-  ProjectOrderByRelationAggregateInput: { // input type
-    _count?: NexusGenEnums['SortOrder'] | null; // SortOrder
-  }
-  SkillOrderByWithRelationInput: { // input type
-    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    index?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    listening?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    personalities?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    reading?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    speaking?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    user?: NexusGenInputs['UserOrderByWithRelationInput'] | null; // UserOrderByWithRelationInput
-    userId?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    writing?: NexusGenEnums['SortOrder'] | null; // SortOrder
-  }
-  UserOrderByWithRelationInput: { // input type
-    backEndSkills?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    born?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    education?: NexusGenInputs['EducationOrderByRelationAggregateInput'] | null; // EducationOrderByRelationAggregateInput
-    email?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    englishSkill?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    frontEndSkills?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    github?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    id?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    image?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    index?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    infrastructures?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    location?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    name?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    objective?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    phone?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    project?: NexusGenInputs['ProjectOrderByRelationAggregateInput'] | null; // ProjectOrderByRelationAggregateInput
-    skill?: NexusGenInputs['SkillOrderByWithRelationInput'] | null; // SkillOrderByWithRelationInput
-    strength?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    tagline?: NexusGenEnums['SortOrder'] | null; // SortOrder
-    website?: NexusGenEnums['SortOrder'] | null; // SortOrder
-  }
-  UserWhereUniqueInput: { // input type
-    id?: string | null; // String
-  }
 }
 
 export interface NexusGenEnums {
-  SortOrder: "asc" | "desc"
 }
 
 export interface NexusGenScalars {
@@ -78,55 +30,55 @@ export interface NexusGenScalars {
 export interface NexusGenObjects {
   Education: { // root type
     date?: string | null; // String
-    degree: string; // String!
-    fieldOfStudy: string; // String!
-    id: string; // String!
-    index: number; // Int!
-    institution: string; // String!
-    userId: string; // String!
+    degree?: string | null; // String
+    fieldOfStudy?: string | null; // String
+    id?: string | null; // ID
+    index?: number | null; // Int
+    institution?: string | null; // String
+    userId?: string | null; // String
   }
   Project: { // root type
-    description: string; // String!
-    finished: boolean; // Boolean!
-    id: string; // String!
-    index: number; // Int!
+    description?: string | null; // String
+    finished?: boolean | null; // Boolean
+    id?: string | null; // ID
+    index?: number | null; // Int
     link1?: string | null; // String
     link2?: string | null; // String
     link3?: string | null; // String
     sourceCode?: string | null; // String
-    techniques: string[]; // [String!]!
-    technologies: string[]; // [String!]!
-    title: string; // String!
-    userId: string; // String!
+    techniques?: Array<string | null> | null; // [String]
+    technologies?: Array<string | null> | null; // [String]
+    title?: string | null; // String
+    userId?: string | null; // String
   }
   Query: {};
   Skill: { // root type
-    id: string; // String!
-    listening: number; // Int!
-    personalities: string[]; // [String!]!
-    reading: number; // Int!
-    speaking: number; // Int!
-    userId: string; // String!
-    writing: number; // Int!
+    id?: string | null; // ID
+    listening?: number | null; // Int
+    personalities?: Array<string | null> | null; // [String]
+    reading?: number | null; // Int
+    speaking?: number | null; // Int
+    userId?: string | null; // String
+    writing?: number | null; // Int
   }
   User: { // root type
-    backEndSkills: string[]; // [String!]!
-    born: string; // String!
-    email: string; // String!
-    englishSkill: string; // String!
-    frontEndSkills: string[]; // [String!]!
-    github: string; // String!
-    id: string; // String!
-    image: string; // String!
-    index: number; // Int!
-    infrastructures: string[]; // [String!]!
-    location: string; // String!
-    name: string; // String!
-    objective: string; // String!
-    phone: string; // String!
-    strength: string; // String!
-    tagline: string; // String!
-    website: string; // String!
+    backEndSkills?: Array<string | null> | null; // [String]
+    born?: string | null; // String
+    email?: string | null; // String
+    englishSkill?: string | null; // String
+    frontEndSkills?: Array<string | null> | null; // [String]
+    github?: string | null; // String
+    id?: string | null; // ID
+    image?: string | null; // String
+    index?: number | null; // Int
+    infrastructures?: Array<string | null> | null; // [String]
+    location?: string | null; // String
+    name?: string | null; // String
+    objective?: string | null; // String
+    phone?: string | null; // String
+    strength?: string | null; // String
+    tagline?: string | null; // String
+    website?: string | null; // String
   }
 }
 
@@ -138,68 +90,65 @@ export interface NexusGenUnions {
 
 export type NexusGenRootTypes = NexusGenObjects
 
-export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars & NexusGenEnums
+export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
   Education: { // field return type
     date: string | null; // String
-    degree: string; // String!
-    fieldOfStudy: string; // String!
-    id: string; // String!
-    index: number; // Int!
-    institution: string; // String!
-    user: NexusGenRootTypes['User']; // User!
-    userId: string; // String!
+    degree: string | null; // String
+    fieldOfStudy: string | null; // String
+    id: string | null; // ID
+    index: number | null; // Int
+    institution: string | null; // String
+    userId: string | null; // String
   }
   Project: { // field return type
-    description: string; // String!
-    finished: boolean; // Boolean!
-    id: string; // String!
-    index: number; // Int!
+    description: string | null; // String
+    finished: boolean | null; // Boolean
+    id: string | null; // ID
+    index: number | null; // Int
     link1: string | null; // String
     link2: string | null; // String
     link3: string | null; // String
     sourceCode: string | null; // String
-    techniques: string[]; // [String!]!
-    technologies: string[]; // [String!]!
-    title: string; // String!
-    user: NexusGenRootTypes['User']; // User!
-    userId: string; // String!
+    techniques: Array<string | null> | null; // [String]
+    technologies: Array<string | null> | null; // [String]
+    title: string | null; // String
+    userId: string | null; // String
   }
   Query: { // field return type
     user: Array<NexusGenRootTypes['User'] | null>; // [User]!
-    users: NexusGenRootTypes['User'][]; // [User!]!
   }
   Skill: { // field return type
-    id: string; // String!
-    listening: number; // Int!
-    personalities: string[]; // [String!]!
-    reading: number; // Int!
-    speaking: number; // Int!
-    userId: string; // String!
-    writing: number; // Int!
+    id: string | null; // ID
+    listening: number | null; // Int
+    personalities: Array<string | null> | null; // [String]
+    reading: number | null; // Int
+    speaking: number | null; // Int
+    userId: string | null; // String
+    writing: number | null; // Int
   }
   User: { // field return type
-    backEndSkills: string[]; // [String!]!
-    born: string; // String!
+    backEndSkills: Array<string | null> | null; // [String]
+    born: string | null; // String
     education: Array<NexusGenRootTypes['Education'] | null>; // [Education]!
-    email: string; // String!
-    englishSkill: string; // String!
-    frontEndSkills: string[]; // [String!]!
-    github: string; // String!
-    id: string; // String!
-    image: string; // String!
-    index: number; // Int!
-    infrastructures: string[]; // [String!]!
-    location: string; // String!
-    name: string; // String!
-    objective: string; // String!
-    phone: string; // String!
+    email: string | null; // String
+    englishSkill: string | null; // String
+    frontEndSkills: Array<string | null> | null; // [String]
+    github: string | null; // String
+    id: string | null; // ID
+    image: string | null; // String
+    index: number | null; // Int
+    infrastructures: Array<string | null> | null; // [String]
+    location: string | null; // String
+    name: string | null; // String
+    objective: string | null; // String
+    phone: string | null; // String
     project: Array<NexusGenRootTypes['Project'] | null>; // [Project]!
     skill: NexusGenRootTypes['Skill'] | null; // Skill
-    strength: string; // String!
-    tagline: string; // String!
-    website: string; // String!
+    strength: string | null; // String
+    tagline: string | null; // String
+    website: string | null; // String
   }
 }
 
@@ -208,16 +157,15 @@ export interface NexusGenFieldTypeNames {
     date: 'String'
     degree: 'String'
     fieldOfStudy: 'String'
-    id: 'String'
+    id: 'ID'
     index: 'Int'
     institution: 'String'
-    user: 'User'
     userId: 'String'
   }
   Project: { // field return type name
     description: 'String'
     finished: 'Boolean'
-    id: 'String'
+    id: 'ID'
     index: 'Int'
     link1: 'String'
     link2: 'String'
@@ -226,15 +174,13 @@ export interface NexusGenFieldTypeNames {
     techniques: 'String'
     technologies: 'String'
     title: 'String'
-    user: 'User'
     userId: 'String'
   }
   Query: { // field return type name
     user: 'User'
-    users: 'User'
   }
   Skill: { // field return type name
-    id: 'String'
+    id: 'ID'
     listening: 'Int'
     personalities: 'String'
     reading: 'Int'
@@ -250,7 +196,7 @@ export interface NexusGenFieldTypeNames {
     englishSkill: 'String'
     frontEndSkills: 'String'
     github: 'String'
-    id: 'String'
+    id: 'ID'
     image: 'String'
     index: 'Int'
     infrastructures: 'String'
@@ -267,15 +213,6 @@ export interface NexusGenFieldTypeNames {
 }
 
 export interface NexusGenArgTypes {
-  Query: {
-    users: { // args
-      after?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
-      before?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
-      first?: number | null; // Int
-      last?: number | null; // Int
-      orderBy?: NexusGenInputs['UserOrderByWithRelationInput'][] | null; // [UserOrderByWithRelationInput!]
-    }
-  }
 }
 
 export interface NexusGenAbstractTypeMembers {
@@ -286,9 +223,9 @@ export interface NexusGenTypeInterfaces {
 
 export type NexusGenObjectNames = keyof NexusGenObjects;
 
-export type NexusGenInputNames = keyof NexusGenInputs;
+export type NexusGenInputNames = never;
 
-export type NexusGenEnumNames = keyof NexusGenEnums;
+export type NexusGenEnumNames = never;
 
 export type NexusGenInterfaceNames = never;
 

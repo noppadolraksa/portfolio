@@ -5,7 +5,7 @@ import { nexusPrisma } from "nexus-plugin-prisma";
 
 export const schema = makeSchema({
   types,
-  plugins: [nexusPrisma({ experimentalCRUD: true })],
+  plugins: [],
   outputs: {
     typegen: join(process.cwd(), "src/graphql", "nexus.ts"),
     schema: join(process.cwd(), "src/graphql", "schema.graphql"),

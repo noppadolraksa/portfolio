@@ -4,117 +4,62 @@
 
 type Education {
   date: String
-  degree: String!
-  fieldOfStudy: String!
-  id: String!
-  index: Int!
-  institution: String!
-  user: User!
-  userId: String!
-}
-
-input EducationOrderByRelationAggregateInput {
-  _count: SortOrder
+  degree: String
+  fieldOfStudy: String
+  id: ID
+  index: Int
+  institution: String
+  userId: String
 }
 
 type Project {
-  description: String!
-  finished: Boolean!
-  id: String!
-  index: Int!
+  description: String
+  finished: Boolean
+  id: ID
+  index: Int
   link1: String
   link2: String
   link3: String
   sourceCode: String
-  techniques: [String!]!
-  technologies: [String!]!
-  title: String!
-  user: User!
-  userId: String!
-}
-
-input ProjectOrderByRelationAggregateInput {
-  _count: SortOrder
+  techniques: [String]
+  technologies: [String]
+  title: String
+  userId: String
 }
 
 type Query {
   user: [User]!
-  users(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int, orderBy: [UserOrderByWithRelationInput!]): [User!]!
 }
 
 type Skill {
-  id: String!
-  listening: Int!
-  personalities: [String!]!
-  reading: Int!
-  speaking: Int!
-  userId: String!
-  writing: Int!
-}
-
-input SkillOrderByWithRelationInput {
-  id: SortOrder
-  index: SortOrder
-  listening: SortOrder
-  personalities: SortOrder
-  reading: SortOrder
-  speaking: SortOrder
-  user: UserOrderByWithRelationInput
-  userId: SortOrder
-  writing: SortOrder
-}
-
-enum SortOrder {
-  asc
-  desc
+  id: ID
+  listening: Int
+  personalities: [String]
+  reading: Int
+  speaking: Int
+  userId: String
+  writing: Int
 }
 
 type User {
-  backEndSkills: [String!]!
-  born: String!
+  backEndSkills: [String]
+  born: String
   education: [Education]!
-  email: String!
-  englishSkill: String!
-  frontEndSkills: [String!]!
-  github: String!
-  id: String!
-  image: String!
-  index: Int!
-  infrastructures: [String!]!
-  location: String!
-  name: String!
-  objective: String!
-  phone: String!
+  email: String
+  englishSkill: String
+  frontEndSkills: [String]
+  github: String
+  id: ID
+  image: String
+  index: Int
+  infrastructures: [String]
+  location: String
+  name: String
+  objective: String
+  phone: String
   project: [Project]!
   skill: Skill
-  strength: String!
-  tagline: String!
-  website: String!
-}
-
-input UserOrderByWithRelationInput {
-  backEndSkills: SortOrder
-  born: SortOrder
-  education: EducationOrderByRelationAggregateInput
-  email: SortOrder
-  englishSkill: SortOrder
-  frontEndSkills: SortOrder
-  github: SortOrder
-  id: SortOrder
-  image: SortOrder
-  index: SortOrder
-  infrastructures: SortOrder
-  location: SortOrder
-  name: SortOrder
-  objective: SortOrder
-  phone: SortOrder
-  project: ProjectOrderByRelationAggregateInput
-  skill: SkillOrderByWithRelationInput
-  strength: SortOrder
-  tagline: SortOrder
-  website: SortOrder
-}
-
-input UserWhereUniqueInput {
-  id: String
+  strength: String
+  tagline: String
+  website: String
 }

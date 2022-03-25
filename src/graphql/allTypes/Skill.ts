@@ -3,12 +3,12 @@ import { objectType } from "nexus";
 export const Skill = objectType({
   name: "Skill",
   definition(t) {
-    t.model.listening();
-    t.model.reading();
-    t.model.speaking();
-    t.model.writing();
-    t.model.id();
-    t.model.userId();
-    t.model.personalities();
+    t.id("id");
+    t.int("listening");
+    t.int("reading");
+    t.int("speaking");
+    t.int("writing");
+    t.string("userId");
+    t.list.string("personalities");
   },
 });
