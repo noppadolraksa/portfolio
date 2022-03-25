@@ -40,43 +40,6 @@ export const data = {
       "Web Security",
     ],
     infrastructures: ["Docker", "Heroku", "Github"],
-    positions: [
-      {
-        title: "Assistant of product manager",
-        company: "AAC & TRW Asiatic Co, Ltd,",
-        startDate: "04-2016",
-        endDate: "08-2016",
-        employmentType: "Trainee",
-        description:
-          "summary email from each supplier, planning stock control,designing excel condition as a request, adjusting database to be cleaner",
-      },
-      {
-        title: "Sales Executive",
-        company: "LDT Microprecision",
-        startDate: "10-2017",
-        endDate: "01-2019",
-        employmentType: "Full-Time",
-        description:
-          "Trained about the product semiconductor tools at Penang for 2 weeks. Market company products to their multinational company (End user+Purchasing). Make and arrange an appointment for presentation and meeting. Work with overseas. Generate and attend to customers enquiries and maintain good relationship with customers. Promote company new products to their customers",
-      },
-      {
-        title: "Grocery store",
-        company: "Family business",
-        startDate: "02-2019",
-        endDate: "01-2021",
-        employmentType: "Family business",
-        description: "",
-      },
-      {
-        title: "food delivery",
-        company: "Jaw Pon Fire",
-        startDate: "01-2021",
-        endDate: "present",
-        employmentType: "Owner",
-        description: "",
-        link1: "https://lin.ee/BkjeJ9A",
-      },
-    ],
   },
   project: [
     {
@@ -199,4 +162,41 @@ export const data = {
       "Resolving Problem",
     ],
   },
+  experience: [
+    {
+      title: "Assistant of product manager",
+      company: "AAC & TRW Asiatic Co, Ltd,",
+      startDate: "04-2016",
+      endDate: "08-2016",
+      employmentType: "Trainee",
+      description:
+        "summary email from each supplier, planning stock control,designing excel condition as a request, adjusting database to be cleaner",
+    },
+    {
+      title: "Sales Executive",
+      company: "LDT Microprecision",
+      startDate: "10-2017",
+      endDate: "01-2019",
+      employmentType: "Full-Time",
+      description:
+        "Trained about the product semiconductor tools at Penang for 2 weeks. Market company products to their multinational company (End user+Purchasing). Make and arrange an appointment for presentation and meeting. Work with overseas. Generate and attend to customers enquiries and maintain good relationship with customers. Promote company new products to their customers",
+    },
+    {
+      title: "Grocery store",
+      company: "Family business",
+      startDate: "02-2019",
+      endDate: "01-2021",
+      employmentType: "Family business",
+      description: "",
+    },
+    {
+      title: "food delivery",
+      company: "Jaw Pon Fire",
+      startDate: "01-2021",
+      endDate: "present",
+      employmentType: "Owner",
+      description: "",
+      link1: "https://lin.ee/BkjeJ9A",
+    },
+  ],
 };

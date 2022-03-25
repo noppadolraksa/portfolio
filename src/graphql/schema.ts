@@ -7,13 +7,7 @@ export const schema = makeSchema({
   types,
   plugins: [nexusPrisma({ experimentalCRUD: true })],
   outputs: {
-    typegen: join(
-      process.cwd(),
-      "node_modules",
-      "@types",
-      "nexus-typegen",
-      "index.d.ts"
-    ),
+    typegen: join(process.cwd(), "src/graphql", "nexus.ts"),
     schema: join(process.cwd(), "src/graphql", "schema.graphql"),
   },
   contextType: {
