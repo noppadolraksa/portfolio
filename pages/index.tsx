@@ -8,7 +8,7 @@ import { UserProps } from "src/types/userTypes";
 import IndexContainer from "src/components/Index";
 import { GetServerSideProps } from "next";
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { data } = await client.query({
     query: gql`
       query Query {
