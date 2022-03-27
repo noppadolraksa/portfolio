@@ -12,7 +12,8 @@
         "prismaGenerate": "dotenv -e .env.local -- npx prisma generate",
         "prismaPush": "dotenv -e .env.local -- npx prisma db push",
         "prismaSeed": "dotenv -e .env.local -- npx prisma db seed",
-        "prismaDev": "dotenv -e .env.local -- npx prisma migrate dev"
+        "prismaDev": "dotenv -e .env.local -- npx prisma migrate dev",
+        "prismaReset": "dotenv -e .env.local -- npx prisma migrate reset"
     },
     "prisma": {
         "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} src/prisma/seed.ts",

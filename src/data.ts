@@ -156,10 +156,12 @@ export const data = {
     communicating: 5,
     personalities: [
       "Humble",
-      "Emphaty",
-      "Patience",
-      "Positive Attitude",
-      "Resolving Problem",
+      "Flexible",
+      "Hard-working",
+      "Creative",
+      "Problem-solving",
+      "Open-mined",
+      "Passionate",
     ],
   },
   experience: [
