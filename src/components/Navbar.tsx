@@ -137,9 +137,7 @@ const Navbar = ({ user }: UserProps) => {
   return (
     <NavbarContainer>
       <Left>
-        <PictureContainer>
-          <ProfileWrapper src={user.image} />
-        </PictureContainer>
+        <PictureContainer/>
       </Left>
       <Right>
         <ThemeSwitch>
