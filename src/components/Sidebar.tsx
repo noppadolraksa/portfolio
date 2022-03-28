@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PersonalitiesText, SubTitleText, TitleText } from "src/utils/text";
-import { UserProps } from "src/types/userTypes";
-import RatingStars from "src/utils/RatingStars";
+import { UserProps } from "src/types/userTypes
 
 const Container = styled.div`
   width: 33%;
@@ -117,23 +116,7 @@ const Sidebar = ({ user }: UserProps) => {
                 <span style={{ fontWeight: "400" }}>English:</span> Intermediate
               </SubTitleText>
 
-              <SubTitleText style={{ display: "flex" }}>
-                <span style={{ fontWeight: "400" }}>reading:</span>
-                <RatingStars rating={reading} />
-              </SubTitleText>
-
-              <SubTitleText style={{ display: "flex" }}>
-                <span style={{ fontWeight: "400" }}>writing:</span>
-                <RatingStars rating={writing} />
-              </SubTitleText>
-              <SubTitleText style={{ display: "flex" }}>
-                <span style={{ fontWeight: "400" }}>speaking:</span>
-                <RatingStars rating={speaking} />
-              </SubTitleText>
-              <SubTitleText style={{ display: "flex" }}>
-                <span style={{ fontWeight: "400" }}>listening:</span>
-                <RatingStars rating={listening} />
-              </SubTitleText>
+              
               <PersonalitiesContainer>
                 {personalities?.map((personality, index) => (
                   <PersonalitiesText key={index}>
