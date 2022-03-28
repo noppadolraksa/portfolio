@@ -136,8 +136,12 @@ const Navbar = ({ user }: UserProps) => {
 
   return (
     <NavbarContainer>
-      
-      <Right>
+<Left>
+        <PictureContainer>
+           <ProfileWrapper src={user.image} />
+         </PictureContainer>
+</Left>
+     <Right>
         <ThemeSwitch>
           <SubTitleText
             style={{ padding: 0, display: "flex", alignContent: "center" }}
