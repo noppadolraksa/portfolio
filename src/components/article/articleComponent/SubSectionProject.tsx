@@ -110,16 +110,7 @@ const SubSectionProject = ({ project }: ProjectType) => {
                       </SubTitleText>
                     </ListItem>
                   )}
-                  {list.title === "Serverless chat app" && (
-                    <ListItem>
-                      <SubTitleText>
-                        <span style={{ fontWeight: "400" }}>demo: </span>
-                        <Link href="https://www.youtube.com/watch?v=oWjrAPSVYCY">
-                          https://www.youtube.com/watch?v=oWjrAPSVYCY
-                        </Link>
-                      </SubTitleText>
-                    </ListItem>
-                  )}
+
                 </List>
               </Right>
             </Topic>
