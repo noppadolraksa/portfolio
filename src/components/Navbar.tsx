@@ -136,9 +136,7 @@ const Navbar = ({ user }: UserProps) => {
 
   return (
     <NavbarContainer>
-      <Left>
-        <PictureContainer/>
-      </Left>
+      
       <Right>
         <ThemeSwitch>
           <SubTitleText
